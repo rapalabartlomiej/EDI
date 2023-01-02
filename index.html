@@ -20,11 +20,6 @@
       }).then(response => response.json())
         .then(data => {
             var database = data
-          console.log(data);
-        });
-
-        // reszta to kod z innego proejktu ktory wyswietla tabelke
-
             var kod = "<table><tr>"
 
                 for (var prop in database[0]) {
@@ -50,6 +45,11 @@
             var kod = kod + "</table>"
 
             document.getElementById('tabelka').innerHTML = kod 
+       
+        });
+
+        // reszta to kod z innego proejktu ktory wyswietla tabelke
+        console.log(database)
        
     </script>
 
