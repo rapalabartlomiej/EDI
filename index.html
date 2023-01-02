@@ -7,6 +7,53 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="tabelka"></div>
+
+    <script>
+        console.log("ds")
+        var database = 0
+        fetch('https://my.api.mockaroo.com/customers.json', {
+        method: 'GET',
+        headers: {
+          'X-API-Key': '873acd60'
+        }
+      }).then(response => response.json())
+        .then(data => {
+            var database = data
+          console.log(data);
+        });
+
+        // reszta to kod z innego proejktu ktory wyswietla tabelke
+
+            var kod = "<table><tr>"
+
+                for (var prop in database[0]) {
+                    kod = kod + "<th>" 
+                    kod= kod + prop 
+                    kod = kod + "</th>"  
+                }
+
+                kod = kod + "</tr>"
+            
+            for(var i = 0;i<database.length;i++){
+                kod = kod + "<tr>";
+                    //Object.keys(myObj).length
+                    for (var j = 0;j<Object.keys(database[i]).length;j++){
+                        kod = kod + "<td>"
+                            kod = kod + Object.values(database[i])[j]
+                        kod = kod + "</td>"
+                    }
+                  
+                console.log("-------------")
+                kod = kod + "</tr>"
+            }
+            var kod = kod + "</table>"
+
+            document.getElementById('tabelka').innerHTML = kod 
+       
+    </script>
+
+    
     <h1>PROJEKT</h1>
 </body>
 </html>
