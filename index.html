@@ -44,7 +44,7 @@
                         kod = kod + "</td>"
                     }
                   
-                console.log("-------------")
+                
                 kod = kod + "</tr>"
             }
             var kod = kod + "</table>"
@@ -106,24 +106,65 @@
     }
 });
        
-        });
+        let pomoc = 0
+        let sum = [0,0,0,0,0]
+        let count_people = [0,0,0,0,0]
+        for(var i=0;i<100;i++){
+            number = Object.values(database[i])[3]
+            switch (true) {
+                case (number >= 18 && number <= 25):
+                sum[0] += toFloat(Object.values(database[i])[8])
+                console.log(toFloat(Object.values(database[i])[8]))
+                count_people[0]++
+                
+                break;
 
-        
+                case (number > 25 && number <= 35):
+                sum[1] += toFloat(Object.values(database[i])[8])
+                count_people[1]++
+                
+                break;
 
-        // reszta to kod z innego proejktu ktory wyswietla tabelke
-       
-       
+                case (number > 35 && number <= 45):
+                sum[2] += toFloat(Object.values(database[i])[8])
+                count_people[2]++
+                
+                break;
+
+                case (number > 45 && number <= 55):
+                sum[3] += toFloat(Object.values(database[i])[8])
+                count_people[3]++
+                
+                break;
+
+                case (number > 55 && number <= 65):
+                sum[4] += toFloat(Object.values(database[i])[8])
+                count_people[4]++
+                
+                break;
+
+                default:
+                console.log('The number is something else');
+            }
+        }
+
+        function toFloat(str) {
+            return parseFloat(str.slice(1, -3));
+        }
+
+
+        console.log("-------")
+        console.log("-------")
+console.log(sum)
+console.log(count_people)
+for(let i=0;i<5;i++){    sum[i] = sum[i]/count_people[i];sum[i] = parseInt(sum[i]) }    
 
 
 
 
 
-
-
-
-
-
-        
+        });    
+  
     </script>
    
 
