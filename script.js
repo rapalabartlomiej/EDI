@@ -1,5 +1,3 @@
-
-        
         fetch('https://my.api.mockaroo.com/customers.json', {
         method: 'GET',
         headers: {
@@ -105,31 +103,26 @@
                 sum[0] += toFloat(Object.values(database[i])[8])
                 console.log(toFloat(Object.values(database[i])[8]))
                 count_people[0]++
-                
                 break;
 
                 case (number > 25 && number <= 35):
                 sum[1] += toFloat(Object.values(database[i])[8])
                 count_people[1]++
-                
                 break;
 
                 case (number > 35 && number <= 45):
                 sum[2] += toFloat(Object.values(database[i])[8])
                 count_people[2]++
-                
                 break;
 
                 case (number > 45 && number <= 55):
                 sum[3] += toFloat(Object.values(database[i])[8])
                 count_people[3]++
-                
                 break;
 
                 case (number > 55 && number <= 65):
                 sum[4] += toFloat(Object.values(database[i])[8])
                 count_people[4]++
-                
                 break;
 
                 default:
@@ -140,8 +133,6 @@
         function toFloat(str) {
             return parseFloat(str.slice(1, -3));
         }
-
-
         console.log("-------")
         console.log("-------")
 console.log(sum)
@@ -149,22 +140,16 @@ console.log(count_people)
 for(let i=0;i<5;i++){    sum[i] = sum[i]/count_people[i];sum[i] = parseInt(sum[i]) }    
 
 
-
-
-
-
 var ctxx = document.getElementById('myCharttt').getContext('2d');
 var chartxx = new Chart(ctxx, {
 // The type of chart we want to create
 type: 'line',
-
-// The data for our dataset
 data: {
 labels: ['18 - 25', '25 - 35', '35 - 45', '45 - 55', '55 - 65'],
 datasets: [
 {
 type: 'line',
-label: 'srednia wynagrodzenia dla wieku',
+label: 'Średnia wynagrodzenia dla wieku',
 backgroundColor: 'rgb(54, 162, 235)',
 borderColor: 'rgb(54, 162, 235)',
 data: sum,
@@ -174,7 +159,7 @@ yAxisID: 'y-axis-2'
 ,
 {
     type: 'bar',
-    label: 'ilosc osob w grupie wiekowej',
+    label: 'Liczba osób w grupie wiekowej',
     backgroundColor: 'rgb(255, 99, 132)',
     borderColor: 'rgb(255, 99, 132)',
     data: count_people,
@@ -183,31 +168,27 @@ yAxisID: 'y-axis-2'
     }
 ]
 },
-
-// Configuration options go here
 options: {
 scales: {
 yAxes: [
 {
   id: 'y-axis-1',
   ticks: {
-     // Change font color to blue
+    fontColor:'red',
     beginAtZero: true
   }
 },
 {
   id: 'y-axis-2',
-  
   position: 'right',
   ticks: {
-    fontColor:'red',
+    fontColor:'blue',
     beginAtZero: true
   }
 }
 ]
 }
 }
-
 });
 
 
