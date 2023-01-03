@@ -1,0 +1,13 @@
+body{
+    background-color: lightgray;
+}
+.person{
+    background-color: #33b5e5;
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid #fff;
+}
+.opis{
+    width: 100%;
+    border: 2px solid #fff;
+}
