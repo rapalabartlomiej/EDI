@@ -8,11 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="tabelka"></div>
-    <div>
+   
+    <div style="width: 600px; height: 400px;">
         <canvas id="myChart" width="400" height="400"></canvas>
       </div>
-    
+      <br><br>
+      <div style="width: 600px; height: 400px;">
+        <canvas id="myCharttt" width="100%" height="100%"></canvas>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <div id="tabelka"></div>
 
     <script>
         
@@ -163,12 +168,71 @@ for(let i=0;i<5;i++){    sum[i] = sum[i]/count_people[i];sum[i] = parseInt(sum[i
 
 
 
+
+var ctxx = document.getElementById('myCharttt').getContext('2d');
+var chartxx = new Chart(ctxx, {
+// The type of chart we want to create
+type: 'line',
+
+// The data for our dataset
+data: {
+labels: ['18 - 25', '25 - 35', '35 - 45', '45 - 55', '55 - 65'],
+datasets: [{
+type: 'line',
+label: 'ilosc osob w grupie wiekowej',
+backgroundColor: 'rgb(255, 99, 132)',
+borderColor: 'rgb(255, 99, 132)',
+data: count_people,
+fill: false,
+yAxisID: 'y-axis-1'
+},
+{
+type: 'line',
+label: 'srednia wynagrodzenia dla wieku',
+backgroundColor: 'rgb(54, 162, 235)',
+borderColor: 'rgb(54, 162, 235)',
+data: sum,
+fill: false,
+yAxisID: 'y-axis-2'
+}
+]
+},
+
+// Configuration options go here
+options: {
+scales: {
+yAxes: [
+{
+  id: 'y-axis-1',
+  ticks: {
+     // Change font color to blue
+    beginAtZero: true
+  }
+},
+{
+  id: 'y-axis-2',
+  
+  position: 'right',
+  ticks: {
+    fontColor:'red',
+    beginAtZero: true
+  }
+}
+]
+}
+}
+
+});
+
+
+
+
         });    
   
     </script>
    
 
     
-    <h1>PROJEKT</h1>
+   
 </body>
 </html>
