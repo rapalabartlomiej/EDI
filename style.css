@@ -1,5 +1,7 @@
 body{
     background-color: lightgray;
+        background: url(background.jpg) no-repeat center fixed; 
+        background-size: cover;
 }
 .person{
     background-color: #fff;
