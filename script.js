@@ -8,7 +8,7 @@
 
             var database = data
 
-/*
+
             var kod = "<table><tr>"
 
                 for (var prop in database[0]) {
@@ -36,7 +36,7 @@
             document.getElementById('tabelka').innerHTML = kod 
 
             //+++++++++++++++++++++++++++++
-*/
+
 
 
         var ctx = document.getElementById("myChart").getContext("2d");

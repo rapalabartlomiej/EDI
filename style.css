@@ -2,12 +2,18 @@ body{
     background-color: lightgray;
 }
 .person{
-    background-color: #33b5e5;
+    background-color: #fff;
     padding: 1rem;
     text-align: center;
-    border: 2px solid #fff;
+    border: 2px solid #33b5e5;
 }
 .opis{
     width: 100%;
-    border: 2px solid #fff;
+    
 }
+#tabelka{
+    
+    width: 100%;
+}
+td{border: 1px solid black;height: auto;width: auto;}
+th{border: 1px solid black;height: auto;width: auto;}
