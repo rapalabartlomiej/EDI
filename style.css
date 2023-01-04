@@ -4,18 +4,51 @@ body{
         background-size: cover;
 }
 .person{
-    background-color: #fff;
+    background-color: rgb(211, 211, 211, 0.8);
     padding: 1rem;
     text-align: center;
-    border: 2px solid #33b5e5;
+    border: 2px solid darkolivegreen;
 }
 .opis{
     width: 100%;
-    
+    text-align: left;
+    font-family: 'Kanit', serif;
+    font-family: 'Space Grotesk', serif;
 }
 #tabelka{
-    
+    background-color: #d3d3d3cc;
+    display: block;
     width: 100%;
 }
-td{border: 1px solid black;height: auto;width: auto;}
-th{border: 1px solid black;height: auto;width: auto;}
+td{border: 1px solid darkolivegreen;height: auto;width: auto;}
+th{border: 1px solid darkolivegreen;height: auto;width: auto;}
+#imiona{
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 25px;
+}
+#tytul_projektu{
+    font-size: 100;
+    word-spacing: 30px;
+    text-shadow: 2px 2px 5px darkolivegreen;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+a:link {
+    color: darkolivegreen;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:visited {
+    color: darkolivegreen;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover {
+    color: orange;
+    background-color: transparent;
+    text-decoration: underline;
+  }

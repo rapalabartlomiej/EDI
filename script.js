@@ -66,11 +66,11 @@
                         datasets: [{
                             data: talllica,
                             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(155, 206, 86, 0.2)',
-                'rgba(255, 106, 86, 0.2)'
+                'rgba(255, 99, 132, 0.9)',
+                'rgba(54, 162, 235, 0.9)',
+                'rgba(255, 206, 86, 0.9)',
+                'rgba(155, 206, 86, 0.9)',
+                'rgba(255, 106, 86, 0.9)'
             ],
                             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -90,7 +90,6 @@
                         },
                         title: {
                             display: true,
-                            text: 'Liczba klientów w zależności od państwa'
                         }
                     }
                 });
@@ -155,9 +154,9 @@
                         datasets: [
                             {
                                 type: 'line',
-                                label: 'Średnia wynagrodzenia dla wieku',
-                                backgroundColor: 'rgb(54, 162, 235)',
-                                borderColor: 'rgb(54, 162, 235)',
+                                label: 'Average income',
+                                backgroundColor: 'rgb(139,0,0)',
+                                borderColor: 'rgb(139,0,0)',
                                 data: sum,
                                 fill: false,
                                 yAxisID: 'y-axis-2'
@@ -165,9 +164,9 @@
 ,
                             {
                                 type: 'bar',
-                                label: 'Liczba osób w grupie wiekowej',
-                                backgroundColor: 'rgb(255, 99, 132)',
-                                borderColor: 'rgb(255, 99, 132)',
+                                label: 'Number of people in the age group',
+                                backgroundColor: 'rgb(52,1,63)',
+                                borderColor: 'rgb(52,1,63)',
                                 data: count_people,
                                 fill: false,
                                 yAxisID: 'y-axis-1'
@@ -180,7 +179,8 @@
                                 {
                                     id: 'y-axis-1',
                                     ticks: {
-                                        fontColor: 'red',
+                                        fontColor: 'rgb(52,1,63)',
+                                        borderColor: 'rgb(0,0,0)',
                                         beginAtZero: true
                                     }
 },
@@ -188,7 +188,7 @@
                                     id: 'y-axis-2',
                                     position: 'right',
                                     ticks: {
-                                        fontColor: 'blue',
+                                        fontColor: 'rgb(139,0,0)',
                                         beginAtZero: true
                                     }
 }
