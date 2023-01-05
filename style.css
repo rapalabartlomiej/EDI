@@ -25,10 +25,10 @@ th{border: 1px solid darkolivegreen;height: auto;width: auto;}
 #imiona{
     font-family: 'Kanit', sans-serif;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 #tytul_projektu{
-    font-size: 100;
+    font-size: 150px;
     word-spacing: 30px;
     text-shadow: 2px 2px 5px darkolivegreen;
     font-family: 'Kanit', sans-serif;
@@ -52,3 +52,13 @@ a:link {
     background-color: transparent;
     text-decoration: underline;
   }
+
+
+.OPISCHARTOW{
+    font-size: 60px;
+    font-family: 'Squada One', cursive;
+}
+
+.informacje{
+    font-size: 30;
+}

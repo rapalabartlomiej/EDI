@@ -66,18 +66,18 @@
                         datasets: [{
                             data: talllica,
                             backgroundColor: [
-                'rgba(255, 99, 132, 0.9)',
-                'rgba(54, 162, 235, 0.9)',
-                'rgba(255, 206, 86, 0.9)',
-                'rgba(155, 206, 86, 0.9)',
-                'rgba(255, 106, 86, 0.9)'
+                'rgb(139,0,0, 0.9)',
+                'rgb(52,1,63, 0.9)',
+                'rgba(0,100,0, 0.9)',
+                'rgba(0,0,128, 0.9)',
+                'rgba(139, 128, 0, 0.9)'
             ],
                             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(155, 206, 86, 1)',
-                'rgba(255, 106, 86, 1)'
+                'rgb(139,0,0, 1)',
+                'rgb(52,1,63, 1)',
+                'rgba(0,100,0, 1)',
+                'rgba(0,0,128, 1)',
+                'rgba(139, 128, 0, 1)'
             ],
                             borderWidth: 1
         }]
@@ -147,7 +147,7 @@
 
                 var ctxx = document.getElementById('myCharttt').getContext('2d');
                 var chartxx = new Chart(ctxx, {
-                    // The type of chart we want to create
+                    // wykres liniowy
                     type: 'line',
                     data: {
                         labels: ['18 - 25', '25 - 35', '35 - 45', '45 - 55', '55 - 65'],
@@ -162,6 +162,7 @@
                                 yAxisID: 'y-axis-2'
 }
 ,
+                    // wykres slupkowy
                             {
                                 type: 'bar',
                                 label: 'Number of people in the age group',
