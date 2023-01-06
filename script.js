@@ -58,41 +58,45 @@
                                 }
                             }
 
-                var ctx = document.getElementById("myChart").getContext("2d");
-                var myChart = new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ["Poland", "Germany", "France", "Czech Republic", "Lithuania"],
-                        datasets: [{
-                            data: talllica,
-                            backgroundColor: [
-                'rgb(139,0,0, 0.9)',
-                'rgb(52,1,63, 0.9)',
-                'rgba(0,100,0, 0.9)',
-                'rgba(0,0,128, 0.9)',
-                'rgba(139, 128, 0, 0.9)'
-            ],
-                            borderColor: [
-                'rgb(139,0,0, 1)',
-                'rgb(52,1,63, 1)',
-                'rgba(0,100,0, 1)',
-                'rgba(0,0,128, 1)',
-                'rgba(139, 128, 0, 1)'
-            ],
-                            borderWidth: 1
-        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        legend: {
-                            position: 'bottom',
-                        },
-                        title: {
-                            display: true,
-                        }
-                    }
-                });
+                            var ctx = document.getElementById("myChart").getContext("2d");
+                            var myChart = new Chart(ctx, {
+                                type: 'doughnut',
+                                data: {
+                                    labels: ["Poland", "Germany", "France", "Czech Republic", "Lithuania"],
+                                    datasets: [{
+                                        data: talllica,
+                                        backgroundColor: [
+                                            'rgb(139,0,0, 0.9)',
+                                            'rgb(52,1,63, 0.9)',
+                                            'rgba(0,100,0, 0.9)',
+                                            'rgba(0,0,128, 0.9)',
+                                            'rgba(139, 128, 0, 0.9)'
+                                        ],
+                                        borderColor: [
+                                            'rgb(139,0,0, 1)',
+                                            'rgb(52,1,63, 1)',
+                                            'rgba(0,100,0, 1)',
+                                            'rgba(0,0,128, 1)',
+                                            'rgba(139, 128, 0, 1)'
+                                        ],
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    legend: {
+                                        position: 'bottom',
+                                        labels: {
+                                            fontColor: 'black'
+                                        }
+                                    },
+                                    title: {
+                                        display: true,
+                                    }
+                                }
+                            });
+                            
 
                 //WYKRES KOŁO KONIEC
 
@@ -194,7 +198,13 @@
                                     }
 }
 ]
+                        },legend: {
+                            position: 'bottom',
+                            labels: {
+                                fontColor: 'black'
+                            }
                         }
+
                     }
                 });
 
