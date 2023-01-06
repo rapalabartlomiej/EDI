@@ -150,63 +150,68 @@
 
 
                 var ctxx = document.getElementById('myCharttt').getContext('2d');
-                var chartxx = new Chart(ctxx, {
-                    // wykres liniowy
-                    type: 'line',
-                    data: {
-                        labels: ['18 - 25', '25 - 35', '35 - 45', '45 - 55', '55 - 65'],
-                        datasets: [
-                            {
-                                type: 'line',
-                                label: 'Average income',
-                                backgroundColor: 'rgb(139,0,0)',
-                                borderColor: 'rgb(139,0,0)',
-                                data: sum,
-                                fill: false,
-                                yAxisID: 'y-axis-2'
-}
-,
-                    // wykres slupkowy
-                            {
-                                type: 'bar',
-                                label: 'Number of people in the age group',
-                                backgroundColor: 'rgb(52,1,63)',
-                                borderColor: 'rgb(52,1,63)',
-                                data: count_people,
-                                fill: false,
-                                yAxisID: 'y-axis-1'
+var chartxx = new Chart(ctxx, {
+  // wykres liniowy
+  type: 'line',
+  data: {
+    labels: ['18 - 25', '25 - 35', '35 - 45', '45 - 55', '55 - 65'],
+    datasets: [
+      {
+        type: 'line',
+        label: 'Average income',
+        backgroundColor: 'rgb(139,0,0)',
+        borderColor: 'rgb(139,0,0)',
+        data: sum,
+        fill: false,
+        yAxisID: 'y-axis-2'
+      },
+      // wykres slupkowy
+      {
+        type: 'bar',
+        label: 'Number of people in the age group',
+        backgroundColor: 'rgb(52,1,63)',
+        borderColor: 'rgb(52,1,63)',
+        data: count_people,
+        fill: false,
+        yAxisID: 'y-axis-1'
+      }
+    ]
+  },
+  options: {
+    scales: {
+      yAxes: [
+        {
+          id: 'y-axis-1',
+          ticks: {
+            fontColor: 'rgb(52,1,63)',
+            borderColor: 'rgb(0,0,0)',
+            beginAtZero: true
+          }
+        },
+        {
+          id: 'y-axis-2',
+          position: 'right',
+          ticks: {
+            fontColor: 'rgb(139,0,0)',
+            beginAtZero: true
+          }
+        }
+      ],
+      xAxes: [{
+        ticks: {
+          fontColor: 'black'
+        }
+      }]
+    },
+    legend: {
+      position: 'bottom',
+      labels: {
+        fontColor: 'black'
+      }
     }
-]
-                    },
-                    options: {
-                        scales: {
-                            yAxes: [
-                                {
-                                    id: 'y-axis-1',
-                                    ticks: {
-                                        fontColor: 'rgb(52,1,63)',
-                                        borderColor: 'rgb(0,0,0)',
-                                        beginAtZero: true
-                                    }
-},
-                                {
-                                    id: 'y-axis-2',
-                                    position: 'right',
-                                    ticks: {
-                                        fontColor: 'rgb(139,0,0)',
-                                        beginAtZero: true
-                                    }
-}
-]
-                        },legend: {
-                            position: 'bottom',
-                            labels: {
-                                fontColor: 'black'
-                            }
-                        }
+  }
+});
 
-                    }
-                });
 
 
 
