@@ -1,7 +1,8 @@
+        var klucz = prompt("Podaj klucz API:")
         fetch('https://my.api.mockaroo.com/customers.json', {
                 method: 'GET',
                 headers: {
-                    'X-API-Key': '873acd60'
+                    'X-API-Key': klucz
                 }
             }).then(response => response.json())
             .then(data => {
